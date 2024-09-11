@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "477534044858",
+    "project_id": "course-motobike-3d695",
+    "storage_bucket": "course-motobike-3d695.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477534044858:android:6829a70910272e7daeb883",
+        "android_client_info": {
+          "package_name": "com.motobike.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYTzBNna0rv_7LzOg4Yo5FmiEe4sPzBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477534044858:android:b3cfbc067b9a08e9aeb883",
+        "android_client_info": {
+          "package_name": "com.motobikeCS.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYTzBNna0rv_7LzOg4Yo5FmiEe4sPzBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
