@@ -7,6 +7,44 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:477534044858:android:a5434dc1be5cc637aeb883",
+        "android_client_info": {
+          "package_name": "com.example.flutter_motobike_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYTzBNna0rv_7LzOg4Yo5FmiEe4sPzBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477534044858:android:f9b5921d658d0c3caeb883",
+        "android_client_info": {
+          "package_name": "com.example.flutter_motobike_cs_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYTzBNna0rv_7LzOg4Yo5FmiEe4sPzBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:477534044858:android:6829a70910272e7daeb883",
         "android_client_info": {
           "package_name": "com.motobike.app"
