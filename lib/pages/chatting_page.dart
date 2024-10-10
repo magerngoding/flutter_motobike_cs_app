@@ -98,9 +98,13 @@ class _ChattingPageState extends State<ChattingPage> {
 
   Widget chatUser(Chat chat) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(chat.timestamp == null ? '' : formatTimestamp(chat.timestamp!)),
+        Center(
+            child: Text(chat.timestamp == null
+                ? ''
+                : formatTimestamp(chat.timestamp!))),
+        Gap(10),
         if (chat.bikeDetail != null)
           Column(
             children: [
@@ -121,7 +125,62 @@ class _ChattingPageState extends State<ChattingPage> {
           ),
         Container(
           padding: const EdgeInsets.all(10),
-          margin: const EdgeInsets.only(left: 49, right: 24),
+          margin: const EdgeInsets.only(
+            left: 24,
+            right: 49,
+          ),
+          decoration: const BoxDecoration(
+            color: Color(0XFF070623),
+            borderRadius: BorderRadius.all(
+              Radius.circular(
+                16.0,
+              ),
+            ),
+          ),
+          child: Text(
+            chat.message,
+            style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+              height: 1.8,
+            ),
+          ),
+        ),
+        Gap(12),
+        Row(
+          children: [
+            Gap(24),
+            Text(
+              widget.userName,
+              style: TextStyle(
+                fontSize: 14.0,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Gap(8),
+            Image.asset(
+              "assets/chat_profile.png",
+              width: 40.0,
+              height: 40.0,
+            ),
+          ],
+        ),
+        Gap(20),
+      ],
+    );
+  }
+
+  Widget chatCS(Chat chat) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(10),
+          margin: const EdgeInsets.only(
+            left: 49,
+            right: 24,
+          ),
           decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(
@@ -136,66 +195,14 @@ class _ChattingPageState extends State<ChattingPage> {
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
                 color: Color(0XFF070623),
-                height: 1.8),
-          ),
-        ),
-        Gap(12),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              widget.userName,
-              style: TextStyle(
-                fontSize: 14.0,
-                fontWeight: FontWeight.w600,
-                color: Color(0XFF070623),
-              ),
-            ),
-            Gap(8),
-            Image.asset(
-              "assets/chat_profile.png",
-              width: 40.0,
-              height: 40.0,
-            ),
-            Gap(20),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget chatCS(Chat chat) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(10),
-          margin: const EdgeInsets.only(
-            right: 49,
-            left: 24,
-          ),
-          decoration: const BoxDecoration(
-            color: Color(0XFF070623),
-            borderRadius: BorderRadius.all(
-              Radius.circular(
-                16.0,
-              ),
-            ),
-          ),
-          child: Text(
-            chat.message,
-            style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w600,
-                color: Colors.white,
                 height: 1.8 // Untuk renggangin antara paragraf
                 ),
           ),
         ),
         Gap(12),
         Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Gap(24),
             Image.asset(
               "assets/chat_cs.png",
               width: 40.0,
@@ -210,6 +217,7 @@ class _ChattingPageState extends State<ChattingPage> {
                 color: Color(0XFF070623),
               ),
             ),
+            Gap(24),
           ],
         ),
         Gap(20),
@@ -265,6 +273,7 @@ class _ChattingPageState extends State<ChattingPage> {
                 senderId: 'cs',
                 bikeDetail: null,
               );
+              // abis kirim langsung clear field nya
               ChatSource.send(chat, widget.uid).then((value) {
                 edtInput.clear();
               });
@@ -329,11 +338,11 @@ class _ChattingPageState extends State<ChattingPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/detail',
-                arguments: bike['id'],
-              );
+              // Navigator.pushNamed(
+              //   context,
+              //   '/detail',
+              //   arguments: bike['id'],
+              // );
             },
             child: Text(
               "Details",
