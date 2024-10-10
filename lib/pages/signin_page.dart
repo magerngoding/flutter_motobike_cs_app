@@ -49,7 +49,7 @@ class _SigninPageState extends State<SigninPage> {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 0),
         children: [
-          Gap(100),
+          Gap(200),
           Image.asset(
             "assets/logo_text.png",
             width: 171.0,
